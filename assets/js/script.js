@@ -72,3 +72,15 @@ window.addEventListener('resize',() => {
 
     }
 });
+
+section('.logo').addEventListener('click', () => {
+    sections.forEach(element => {
+        element.classList.remove('active')
+    });
+
+    section(`#home`).classList.add('active')
+    headerMenu.forEach(element => {
+        element.classList.remove('active')
+    });
+    section("[data-id='home']").classList.add('active')
+})
